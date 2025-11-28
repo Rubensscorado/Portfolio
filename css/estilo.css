@@ -1,0 +1,374 @@
+:root {
+    --primary: #FF7043;        /* Laranja Quente (inspirado no pôr do sol) */
+    --primary-light: #FFAB91;  /* Laranja Suave (para textos secundários ou hover) */
+    --secondary: #1A1A2E;      /* Azul Escuro Profundo (fundo principal, quase preto da imagem) */
+    --secondary-light: #2C3E50; /* Azul Escuro Médio (fundo de seções) */
+    --glow: #FFAB91;           /* NOVO GLOW: Laranja Suave (igual ao primary-light) */
+    --text-color: #F8F8F2;     /* Branco Gelo (texto principal) */
+    --text-tertiary: #A0A0A0;  /* Cinza Neutro (texto terciário) */
+}
+
+* {
+    font-family: 'Ubuntu';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== HEADER ===== */
+
+#event-subscript {
+    background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url("../img/banner.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 58vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--text-color); 
+}
+
+#disclamer {
+    text-align: center;
+}
+
+#profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-bottom: 1em;
+    border: 3px solid var(--glow); 
+    /* Ajuste de Shadow para o Laranja Suave (FFAB91) */
+    box-shadow: 0 0 18px rgba(255, 171, 145, 0.4); 
+    max-width: 100%;
+    height: auto;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#disclamer h2 {
+    color: var(--glow); 
+    font-size: 2rem;
+}
+
+.about-you {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* ===== FORMULÁRIO ===== */
+
+#subscription-form {
+    background-color: rgba(26, 26, 46, 0.65); 
+    padding: 1em;
+    max-width: 22%;
+    border-radius: 12px;
+    border: 1px solid var(--glow); 
+    backdrop-filter: blur(6px);
+    /* Ajuste de Shadow para o Laranja Suave (FFAB91) */
+    box-shadow: 0 0 15px rgba(255, 171, 145, 0.2); 
+}
+
+#subscription-form p {
+    color: var(--primary-light); 
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    color: var(--text-tertiary); 
+    margin-bottom: 0.3em;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.12);
+    color: var(--text-color); 
+}
+
+.btn {
+    background: var(--glow); 
+    color: #000; 
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--primary-light); 
+}
+
+/* ===== TECNOLOGIAS ===== */
+
+#key-technologys h2 {
+    background: var(--secondary); 
+    color: var(--glow); 
+    text-align: center;
+    padding: 2em;
+    font-weight: bold;
+}
+
+.technologys {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+    margin: 0 auto;
+}
+
+.tecnology {
+    font-size: 0.9em;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 15%;
+    color: var(--text-tertiary); 
+}
+
+.technology-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1em;
+    border: 2px solid var(--glow); 
+    /* Ajuste de Shadow para o Laranja Suave (FFAB91) */
+    box-shadow: 0 0 10px rgba(255, 171, 145, 0.3); 
+}
+
+/* Logos (mantido o padrão) */
+#technology-1 { background-image: url("../img/logos/logos/github.png"); }
+#technology-2 { background-image: url("../img/logos/logos/figma.png"); }
+#technology-3 { background-image: url("../img/logos/logos/html.webp"); }
+#technology-4 { background-image: url("../img/logos/logos/css.webp"); }
+#technology-5 { background-image: url("../img/logos/logos/js.png"); }
+
+/* ===== SOBRE ===== */
+
+#about {
+    height: 400px;
+    background-color: var(--secondary-light); 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--text-color); 
+    margin-bottom: 3em;
+}
+
+#about-id i {
+    color: var(--glow); 
+    font-size: 6em;
+    margin-right: 0.5em;
+}
+
+#about-description h3 {
+    color: var(--glow); 
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+/* ===== PROJETOS ===== */
+
+#projects {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5%;
+  margin-bottom: 4em;
+}
+
+.project img {
+  max-width: 50%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--glow); 
+  /* Ajuste de Shadow para o Laranja Suave (FFAB91) */
+  box-shadow: 0 0 12px rgba(255, 171, 145, 0.25); 
+}
+
+.project-description h3 {
+  margin-bottom: 1em;
+  font-size: 2em;
+  color: var(--primary-light); 
+}
+
+/* ===== RODAPÉ ===== */
+#footer {
+    background-color: var(--secondary); 
+    color: var(--text-color); 
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 30px;
+}
+
+.footer-section h3, .footer-section h4 {
+    color: var(--glow); 
+    margin-bottom: 10px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.social-links li {
+    margin: 10px 0;
+}
+
+.social-links a {
+    color: var(--text-color); 
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--glow); 
+}
+
+.social-links i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.footer-section.credits p {
+    font-size: 0.9em;
+    color: var(--text-tertiary); 
+}
+
+/* ==================================== */
+/* ===== RESPONSIVIDADE (MOBILE) ====== */
+/* ==================================== */
+
+@media (max-width: 1024px) {
+    
+    /* ===== HEADER E FORMULÁRIO ===== */
+
+    #event-subscript {
+        flex-direction: column; 
+        height: auto; 
+        padding: 40px 20px; 
+        gap: 30px; 
+    }
+
+    #disclamer {
+        width: 80%; 
+    }
+
+    #subscription-form {
+        max-width: 90%; 
+    }
+    
+    #subscription-form p {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    /* ===== TECNOLOGIAS ===== */
+
+    .technologys {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 30px; 
+    }
+
+    .tecnology {
+        max-width: 40%; 
+    }
+
+    /* ===== SOBRE ===== */
+
+    #about {
+        flex-direction: column; 
+        height: auto;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    #about-id i {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #about-description {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    /* ===== PROJETOS ===== */
+
+    #projects {
+        width: 90%;
+        padding: 0;
+    }
+    
+    .project {
+        flex-direction: column; 
+        text-align: center;
+        margin-bottom: 3em;
+    }
+
+    .project img {
+        max-width: 100%; 
+        height: auto;
+        margin-top: 20px;
+    }
+    
+    .project:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .project-description h3 {
+        font-size: 1.5em; 
+    }
+    
+    /* Responsividade do Rodapé */
+    .footer-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Ajustes finos para telas muito pequenas */
+@media (max-width: 480px) {
+    .tecnology {
+        max-width: 90%; 
+    }
+}
